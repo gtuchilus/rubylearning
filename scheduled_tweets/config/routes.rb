@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # Get /about
-  get "about", to: "about#index"
+  get "about", to: "about#index", as: :about
 
   # Get "/" homepage
   root to: "main#index"
