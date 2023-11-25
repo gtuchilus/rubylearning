@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   # Get /about
   get "about", to: "about#index"
+
+  # Get "/" homepage
+  root to: "main#index"
 end
