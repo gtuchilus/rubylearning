@@ -2473,3 +2473,522 @@ Processing by RegistrationsController#create as TURBO_STREAM
 Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 945)
 
 
+Started GET "/about" for 127.0.0.1 at 2023-11-26 02:23:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 180)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 365)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 468.8ms | Allocations: 38919)
+Completed 200 OK in 676ms (Views: 531.1ms | ActiveRecord: 0.0ms | Allocations: 43549)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:23:58 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 49.8ms | Allocations: 2145)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 4359)
+Completed 200 OK in 155ms (Views: 64.5ms | ActiveRecord: 2.6ms | Allocations: 19225)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:06 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 551)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:09 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:10 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:10 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:10 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:10 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:10 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 387)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:11 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 387)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:24:11 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:26:54 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 710)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:26:57 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1234)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 15689)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 1.4ms | Allocations: 19989)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:27:01 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:34:42 +0200
+  
+SyntaxError (C:/Users/gtuch/rubylearning/scheduled_tweets/app/controllers/registrations_controller.rb:11: syntax error, unexpected ':', expecting `end' or dummy end
+      render: new
+            ^
+):
+  
+app/controllers/registrations_controller.rb:11: syntax error, unexpected ':', expecting `end' or dummy end
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:37:20 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1314)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 15767)
+Completed 200 OK in 66ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 19675)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:37:27 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1048)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.0ms | Allocations: 2652)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000015130>):
+    3: <%= form_with model: @user, url: sign_up_path do |form| %>
+    4:     <% if @user.errors.any? %>
+    5:         <div class="alert alert-danger">
+    6:            <% user.errors.full_messages.each do |message| %>
+    7:                 <div><%= message %></div>
+    8:             <% end %>
+    9:         </div>
+  
+app/views/registrations/new.html.erb:6
+app/views/registrations/new.html.erb:3
+app/controllers/registrations_controller.rb:11:in `create'
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:38:47 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1335)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 15789)
+Completed 200 OK in 66ms (Views: 35.9ms | ActiveRecord: 1.7ms | Allocations: 20347)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:38:53 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2016)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4262)
+Completed 200 OK in 211ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5617)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:38:56 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1832)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4039)
+Completed 200 OK in 210ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5185)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:39:06 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 820)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3027)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3301)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:39:12 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"4124", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1832)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4040)
+Completed 200 OK in 218ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 5181)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:39:15 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"4124", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1832)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4039)
+Completed 200 OK in 220ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 5179)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:39:17 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"4124", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1832)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4039)
+Completed 200 OK in 246ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5256)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:41:07 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1832)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4039)
+Completed 200 OK in 213ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5188)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:42:16 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1836)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4062)
+Completed 200 OK in 210ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5198)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:42:47 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 95)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2356)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 3046)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:43:27 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2228)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2682)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:43:31 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2228)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2698)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:43:32 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2228)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2689)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:43:37 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2238)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2590)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:43:42 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 844)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3051)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3325)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:43:47 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2588)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4795)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5875)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:43:51 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"1124", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1844)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4070)
+Completed 200 OK in 211ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 5203)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:44:46 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2244)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 2696)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:45:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 187)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 365)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 107.6ms | Allocations: 37429)
+Completed 200 OK in 148ms (Views: 117.9ms | ActiveRecord: 0.0ms | Allocations: 43618)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-11-26 02:45:51 +0200
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 87)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2541)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3014)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:45:54 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2246)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4460)
+Completed 200 OK in 60ms (Views: 18.4ms | ActiveRecord: 2.5ms | Allocations: 19321)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:46:05 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2016)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4263)
+Completed 200 OK in 214ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5884)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:52:55 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1317)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 15771)
+Completed 200 OK in 42ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 19682)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:52:57 +0200
+  
+SyntaxError (C:/Users/gtuch/rubylearning/scheduled_tweets/app/controllers/main_controller.rb:6: syntax error, unexpected end-of-input):
+  
+app/controllers/main_controller.rb:6: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:53:06 +0200
+  
+SyntaxError (C:/Users/gtuch/rubylearning/scheduled_tweets/app/controllers/main_controller.rb:6: syntax error, unexpected end-of-input):
+  
+app/controllers/main_controller.rb:6: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:54:02 +0200
+Processing by MainController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+  
+NameError (undefined local variable or method `sessin' for #<MainController:0x00000000011d78>):
+  
+app/controllers/main_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:54:16 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 159)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 14662)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 15753)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:54:25 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1307)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3519)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 2.7ms | Allocations: 7650)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 02:54:35 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "gtuchilus@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-11-26 00:54:35.765995"], ["updated_at", "2023-11-26 00:54:35.765995"]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 214ms (ActiveRecord: 9.6ms | Allocations: 3184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:54:35 +0200
+Processing by MainController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2305)
+Completed 200 OK in 111ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 14797)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:55:13 +0200
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2237)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 3047)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 02:55:22 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2248)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 2584)
+
+
