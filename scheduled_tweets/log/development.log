@@ -3021,3 +3021,97 @@ Processing by MainController#index as HTML
 Completed 200 OK in 45ms (Views: 34.1ms | ActiveRecord: 1.8ms | Allocations: 18169)
 
 
+Started GET "/sign_up" for 127.0.0.1 at 2023-11-26 02:59:58 +0200
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1315)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3526)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6232)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 03:00:12 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchil1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1861)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4130)
+Completed 200 OK in 215ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 5460)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2023-11-26 03:00:23 +0200
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"gtuchilus@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["email", "gtuchilus@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-11-26 01:00:23.866449"], ["updated_at", "2023-11-26 01:00:23.866449"]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 234ms (ActiveRecord: 1.6ms | Allocations: 1953)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 03:00:23 +0200
+Processing by MainController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2243)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 3067)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 03:07:01 +0200
+Processing by MainController#index as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 161)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 14711)
+Completed 200 OK in 49ms (Views: 33.6ms | ActiveRecord: 11.5ms | Allocations: 19982)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 03:07:11 +0200
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 363)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 14859)
+Completed 200 OK in 52ms (Views: 34.3ms | ActiveRecord: 1.5ms | Allocations: 20537)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-26 03:07:36 +0200
+Processing by SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 459)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 03:07:36 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2275)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2790)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]

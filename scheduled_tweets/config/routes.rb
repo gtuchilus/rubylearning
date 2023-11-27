@@ -14,5 +14,12 @@ Rails.application.routes.draw do
   # Sign-up page
   get "sign_up", to:"registrations#new"
   post "sign_up", to:"registrations#create"
+
+  # Log in page
+  get "sign_in", to:"sessions#new"
+  post "sign_in", to:"sessions#create"
+
+  # Log out page
   delete "logout", to:"sessions#destroy"
+
 end
