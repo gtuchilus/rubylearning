@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: "main#index"
 
-  # Get /about
+  # Get /about page
   get "about", to: "about#index", as: :about
 
   # Sign-up page
@@ -21,5 +21,9 @@ Rails.application.routes.draw do
 
   # Log out page
   delete "logout", to:"sessions#destroy"
+
+  # Password update
+  get "password", to:"passwords#edit", as: :edit_password
+  patch "password", to:"passwords#update"
 
 end
