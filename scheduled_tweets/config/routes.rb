@@ -12,18 +12,22 @@ Rails.application.routes.draw do
   get "about", to: "about#index", as: :about
 
   # Sign-up page
-  get "sign_up", to:"registrations#new"
-  post "sign_up", to:"registrations#create"
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
 
   # Log in page
-  get "sign_in", to:"sessions#new"
-  post "sign_in", to:"sessions#create"
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
 
   # Log out page
-  delete "logout", to:"sessions#destroy"
+  delete "logout", to: "sessions#destroy"
 
   # Password update
-  get "password", to:"passwords#edit", as: :edit_password
-  patch "password", to:"passwords#update"
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
+
+  # Password reset
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
 
 end
