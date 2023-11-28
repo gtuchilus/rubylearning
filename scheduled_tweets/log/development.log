@@ -5317,3 +5317,448 @@ Processing by PasswordResetsController#new as HTML
 Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3873)
 
 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:06:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2285)
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 870)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 108.6ms | Allocations: 39931)
+Completed 200 OK in 150ms (Views: 119.2ms | ActiveRecord: 0.0ms | Allocations: 46088)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:06:29 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 2.4ms | Allocations: 1646)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.1ms | Allocations: 1732)
+PasswordMailer#reset: processed outbound mail in 58.5ms
+Completed 500 Internal Server Error in 528ms (ActiveRecord: 2.5ms | Allocations: 48922)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    4: 
+    5: If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+    6: 
+    7: <% link_to "Reset password", password_reset_edit_url(token: @token) %>
+  
+app/views/password_mailer/reset.html.erb:7
+app/mailers/password_mailer.rb:11:in `reset'
+app/controllers/password_resets_controller.rb:10:in `create'
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:09:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2284)
+  Rendered shared/_navbar.html.erb (Duration: 5.7ms | Allocations: 870)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 132.2ms | Allocations: 39915)
+Completed 200 OK in 173ms (Views: 142.7ms | ActiveRecord: 0.0ms | Allocations: 46069)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:09:45 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 0.8ms | Allocations: 279)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.3ms | Allocations: 495)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 0.7ms | Allocations: 167)
+  Rendered layout layouts/mailer.text.erb (Duration: 2.0ms | Allocations: 357)
+PasswordMailer#reset: processed outbound mail in 50.6ms
+Delivered mail 65663afa2e04c_3b3837dc265f7@gtuchilus.mail (4164.3ms)
+Date: Tue, 28 Nov 2023 21:09:46 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <65663afa2e04c_3b3837dc265f7@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65663afa266b0_3b3837dc26496";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65663afa266b0_3b3837dc26496
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_65663afa266b0_3b3837dc26496
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com, </br>
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_65663afa266b0_3b3837dc26496--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4346ms (ActiveRecord: 1.6ms | Allocations: 56212)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-28 21:09:50 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 99)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2469)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3196)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-28 21:13:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 3427)
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 859)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 40957)
+Completed 200 OK in 161ms (Views: 132.8ms | ActiveRecord: 0.0ms | Allocations: 47130)
+
+
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:13:11 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1352)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3606)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 4280)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:13:13 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 0.8ms | Allocations: 283)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.2ms | Allocations: 499)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 0.6ms | Allocations: 170)
+  Rendered layout layouts/mailer.text.erb (Duration: 1.9ms | Allocations: 360)
+PasswordMailer#reset: processed outbound mail in 18.6ms
+Delivered mail 65663bc9d4d7f_33a037f066e6@gtuchilus.mail (4065.4ms)
+Date: Tue, 28 Nov 2023 21:13:13 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <65663bc9d4d7f_33a037f066e6@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65663bc9d3c59_33a037f065fe";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65663bc9d3c59_33a037f065fe
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_65663bc9d3c59_33a037f065fe
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com, </br>
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_65663bc9d3c59_33a037f065fe--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4208ms (ActiveRecord: 3.7ms | Allocations: 47849)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-28 21:13:17 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 99)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2469)
+Completed 200 OK in 21ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3190)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-28 21:17:45 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 2098)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4366)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 4816)
+
+
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:17:46 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1180)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3430)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 3894)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:17:48 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.1ms | Allocations: 157)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.8ms | Allocations: 147)
+PasswordMailer#reset: processed outbound mail in 6.4ms
+Delivered mail 65663cdc35e89_33a037c86865@gtuchilus.mail (4064.6ms)
+Date: Tue, 28 Nov 2023 21:17:48 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <65663cdc35e89_33a037c86865@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65663cdc35700_33a037c867b0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65663cdc35700_33a037c867b0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_65663cdc35700_33a037c867b0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com, </br>
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_65663cdc35700_33a037c867b0--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4082ms (ActiveRecord: 0.1ms | Allocations: 11998)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-28 21:17:52 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2276)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2777)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-28 21:22:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 3427)
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | Allocations: 859)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 122.3ms | Allocations: 41012)
+Completed 200 OK in 166ms (Views: 133.6ms | ActiveRecord: 0.0ms | Allocations: 47167)
+
+
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:22:49 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1352)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3607)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4260)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:22:50 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 0.7ms | Allocations: 278)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.9ms | Allocations: 494)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 0.5ms | Allocations: 166)
+  Rendered layout layouts/mailer.text.erb (Duration: 1.5ms | Allocations: 356)
+PasswordMailer#reset: processed outbound mail in 17.3ms
+Delivered mail 65663e0b1b2a4_4d4c37dc56ee@gtuchilus.mail (4049.9ms)
+Date: Tue, 28 Nov 2023 21:22:51 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <65663e0b1b2a4_4d4c37dc56ee@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65663e0b1a13a_4d4c37dc559e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65663e0b1a13a_4d4c37dc559e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_65663e0b1a13a_4d4c37dc559e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com, </br>
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_65663e0b1a13a_4d4c37dc559e--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4189ms (ActiveRecord: 3.6ms | Allocations: 47833)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-28 21:22:55 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 99)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2469)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3208)
+
+
