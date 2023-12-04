@@ -5762,3 +5762,423 @@ Processing by MainController#index as TURBO_STREAM
 Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3208)
 
 
+Started GET "/sign_in" for 127.0.0.1 at 2023-11-28 21:28:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 3427)
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 859)
+  Rendered shared/_flash.html.erb (Duration: 1.2ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 146.7ms | Allocations: 40982)
+Completed 200 OK in 191ms (Views: 158.9ms | ActiveRecord: 0.0ms | Allocations: 47140)
+
+
+Started GET "/password/reset" for 127.0.0.1 at 2023-11-28 21:28:35 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1352)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3606)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4280)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-11-28 21:28:38 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 0.8ms | Allocations: 278)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.2ms | Allocations: 494)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 0.5ms | Allocations: 165)
+  Rendered layout layouts/mailer.text.erb (Duration: 1.8ms | Allocations: 355)
+PasswordMailer#reset: processed outbound mail in 26.5ms
+Delivered mail 65663f668a76d_271837dc77512@gtuchilus.mail (4051.5ms)
+Date: Tue, 28 Nov 2023 21:28:38 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <65663f668a76d_271837dc77512@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_65663f668952b_271837dc77486";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_65663f668952b_271837dc77486
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_65663f668952b_271837dc77486
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_65663f668952b_271837dc77486--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4205ms (ActiveRecord: 2.7ms | Allocations: 47841)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-28 21:28:42 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 99)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2469)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3214)
+
+
+Started GET "/password" for 127.0.0.1 at 2023-11-28 21:31:24 +0200
+Started GET "/password/reset/edit?token=[FILTERED]==--0ebefc6842cf70a72bdd78f422cbc91abf9b6553bf744d9ca3d868b9a423231f" for 127.0.0.1 at 2023-11-29 19:41:57 +0200
+Started GET "/" for 127.0.0.1 at 2023-11-29 19:41:57 +0200
+Started GET "/" for 127.0.0.1 at 2023-11-29 19:41:57 +0200
+Processing by MainController#index as HTML
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 113)
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+Processing by PasswordsController#edit as HTML
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for PasswordResetsController):
+  
+actionpack (7.1.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.2) lib/active_record/migration.rb:654:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  Rendered shared/_navbar.html.erb (Duration: 38.3ms | Allocations: 3051)
+Redirected to http://127.0.0.1:3000/sign_in
+Filter chain halted as :require_user_logged_in! rendered or redirected
+Completed 302 Found in 95ms (ActiveRecord: 0.0ms | Allocations: 79938)
+
+
+  Rendered shared/_navbar.html.erb (Duration: 38.0ms | Allocations: 3096)
+  Rendered shared/_flash.html.erb (Duration: 6.0ms | Allocations: 232)
+  Rendered layout layouts/application.html.erb (Duration: 271.2ms | Allocations: 116600)
+Completed 200 OK in 285ms (Views: 272.8ms | ActiveRecord: 0.0ms | Allocations: 118214)
+
+
+  Rendered shared/_flash.html.erb (Duration: 1.3ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 254.1ms | Allocations: 114854)
+Completed 200 OK in 288ms (Views: 282.3ms | ActiveRecord: 0.0ms | Allocations: 118531)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-04 19:58:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 189)
+  Rendered shared/_navbar.html.erb (Duration: 35.8ms | Allocations: 965)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 738.8ms | Allocations: 37978)
+Completed 200 OK in 1103ms (Views: 841.9ms | ActiveRecord: 0.0ms | Allocations: 42824)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-12-04 19:58:28 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 61.9ms | Allocations: 3154)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 5409)
+Completed 200 OK in 192ms (Views: 76.8ms | ActiveRecord: 0.0ms | Allocations: 7259)
+
+
+Started GET "/password/reset" for 127.0.0.1 at 2023-12-04 19:58:30 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1352)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3606)
+Completed 200 OK in 40ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 4271)
+
+
+Started POST "/password/reset" for 127.0.0.1 at 2023-12-04 19:58:34 +0200
+Processing by PasswordResetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gtuchilus@gmail.com", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gtuchilus@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6:in `create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering password_mailer/reset.html.erb within layouts/mailer
+  Rendered password_mailer/reset.html.erb within layouts/mailer (Duration: 1.2ms | Allocations: 278)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.9ms | Allocations: 494)
+  Rendering layout layouts/mailer.text.erb
+  Rendering password_mailer/reset.text.erb within layouts/mailer
+  Rendered password_mailer/reset.text.erb within layouts/mailer (Duration: 1.0ms | Allocations: 165)
+  Rendered layout layouts/mailer.text.erb (Duration: 4.0ms | Allocations: 355)
+PasswordMailer#reset: processed outbound mail in 158.2ms
+Delivered mail 656e134c372bb_63043804687f9@gtuchilus.mail (4180.8ms)
+Date: Mon, 04 Dec 2023 19:58:36 +0200
+From: from@example.com
+To: gtuchilus@gmail.com
+Message-ID: <656e134c372bb_63043804687f9@gtuchilus.mail>
+Subject: Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_656e134c2b0ab_63043804686cd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_656e134c2b0ab_63043804686cd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+
+----==_mimepart_656e134c2b0ab_63043804686cd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Hi gtuchilus@gmail.com,
+
+Someone requested a reset of your password.
+
+If this was you, click the link to reset your password. The link will expire automatically in 15 minutes.
+
+
+  </body>
+</html>
+
+----==_mimepart_656e134c2b0ab_63043804686cd--
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5318ms (ActiveRecord: 4.0ms | Allocations: 47848)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-04 19:58:40 +0200
+Processing by MainController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2340)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/User/2" for 127.0.0.1 at 2023-12-04 20:03:40 +0200
+Started GET "/password/reset" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1182)
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 105)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 6564)
+Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 7202)
+
+
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6072)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 6746)
+
+
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 6300)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 8070)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 4691)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 5638)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-04 20:12:02 +0200
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 3765)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 4288)
+
+
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 4989)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 6447)
+
+
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3813)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 5139)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/User/2"):
+  
+Started GET "/about" for 127.0.0.1 at 2023-12-04 20:12:10 +0200
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 87)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2388)
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 3027)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2023-12-04 20:12:12 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2095)
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 105)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4342)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 4789)
+
+
